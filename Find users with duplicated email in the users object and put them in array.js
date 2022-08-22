@@ -41,10 +41,10 @@ const users = [
 
 
 //!  Andrew
-//* Version 1
+//* Version 1 (run separately)
 
-dupliMails = users.reduce((user, {email}) => user.set(email, user.has(email)), new Map),
-duplications = users.filter(({email}) => dupliMails.get(email));
+const duplMails = users.reduce((user, {email}) => user.set(email, user.has(email)), new Map),
+duplications = users.filter(({email}) => duplMails.get(email));
 
 console.log("Duplicated eMails:", duplications);
 
