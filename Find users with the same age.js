@@ -40,31 +40,11 @@ const users = [
 
 
 
-//!  Andrew
-
-const usingGmail = (arr) => console.log(arr.filter((el) => el.email.includes('@gmail.com')));
-
-usingGmail(users);
-
-
-
-
-//!  Youriy Dzedzina, Daria Philippova
-
-function gmailUsers(array) {
-  console.log(array.filter((element) => element.email.includes("@gmail.com")));
-}
-
-gmailUsers(users);
-
-
-
 //! Gunay Miri
 
-function usersWithGmailEmailOnly(arr) {
-  const gmail = arr.filter((element) => element.email.includes('@gmail.com')
-);
-console.log(gmail);
-}
-usersWithGmailEmailOnly(users);
+const findDuplicateAge = users
+  .map((user) => user.age)
+  .filter((user, i, userAge) => userAge.indexOf(user) !== i);
+const duplicateAge = users.filter((obj) => findDuplicateAge.includes(obj.age));
 
+console.log(duplicateAge);

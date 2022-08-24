@@ -61,3 +61,28 @@ function youngestUser(array) {
 }
 
 youngestUser(users);
+
+
+
+//!  Daria Philippova
+
+let min = Math.min(...users.map((user) => user.age));
+let youngestUser2 = users.filter((user) => user.age == min);
+
+console.log(youngestUser2);
+
+
+
+//! Gunay Miri
+
+function findYoungestUser(array) {
+  const minAgeUser = array.reduce((previous, current) =>
+    previous.age <= current.age ? previous : current
+  );
+  const minAge = minAgeUser.age;
+  const youngestUsers = array.filter((obj) => obj.age === minAge);
+  console.log(youngestUsers);
+}
+findYoungestUser(users);
+
+

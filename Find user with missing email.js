@@ -38,18 +38,15 @@ const users = [
   },
 ];
 
-
-
 //!  Andrew
 
 users.forEach((keys) => {
-  if (!keys.email)
-  console.log(keys.firstName, keys.lastName + " has no email");
+  if (!keys.email) console.log(keys.firstName, keys.lastName + " has no email");
 });
 
 
 
-//!  Youriy Dzedzina
+//!  Youriy Dzedzina, Daria Philippova
 
 function missingEmailUsers(array) {
   const arrayWithMissingEmails = array.filter(
@@ -60,3 +57,12 @@ function missingEmailUsers(array) {
 
 missingEmailUsers(users);
 
+
+
+//! Gunay Miri
+
+function findMissingEmailUsers() {
+  const missingEmailUser = users.filter((missing) => missing.email === "");
+  console.log(missingEmailUser);
+}
+findMissingEmailUsers(users);

@@ -81,7 +81,7 @@ console.log("Duplicated e-mails", dupliMails);
 
 
 
-//!  Youriy Dzedzina
+//!  Youriy Dzedzina, Daria Philippova
 
 function duplicateEmailUsers(array) {
   const arrayEmail = array
@@ -92,3 +92,17 @@ function duplicateEmailUsers(array) {
 }
 
 duplicateEmailUsers(users);
+
+
+
+//! Gunay Miri
+
+const findDuplicateEmail = users
+  .map((user) => user.email)
+  .filter((user, i, userEmail) => userEmail.indexOf(user) !== i);
+const duplicateEmail = users.filter((obj) =>
+  findDuplicateEmail.includes(obj.email)
+);
+console.log(duplicateEmail);
+
+
